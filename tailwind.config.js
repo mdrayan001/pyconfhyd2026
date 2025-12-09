@@ -5,6 +5,10 @@ module.exports = {
   darkMode: 'selector', // Already correct
   theme: {
     extend: {
+      fontFamily: {
+        heading: ['"Bungee"', 'sans-serif'],
+        body: ['"Belanosima"', 'sans-serif'],
+      },
       colors: {
         primary: {
           50: '#FFC466',
