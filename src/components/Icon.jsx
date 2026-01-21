@@ -24,6 +24,7 @@ import {
   FaCode,
   FaHeart,
   FaBowlFood,
+  FaXmark,
 } from 'react-icons/fa6';
 import { FaExternalLinkAlt, FaArrowCircleRight } from 'react-icons/fa';
 import { MdLightMode, MdDarkMode } from 'react-icons/md';
@@ -32,6 +33,7 @@ import { MdVolunteerActivism, MdCampaign } from 'react-icons/md';
 import { IoTicketSharp } from 'react-icons/io5';
 
 const icons = {
+  Close: FaXmark,
   Envelope: FaEnvelope,
   Facebook: FaFacebook,
   GitHub: FaGithub,
@@ -69,6 +71,10 @@ const icons = {
 
 export const Icon = ({ name, size = 36, className = '', padding = 0 }) => {
   const ReactIcon = icons[name];
+  if (!ReactIcon) {
+    console.warn(`Icon "${name}" not found.`);
+    return null;
+  }
   const iconProps = {
     size: size,
     className: className,

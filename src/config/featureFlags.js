@@ -21,6 +21,7 @@ export const FEATURE_FLAGS = {
   TRAVEL: false,
   COC_REPORTING_GUIDE: true,
   FAQ: true,
+  GALLERY: true,
 };
 
 export const isFeatureEnabled = (flagName) => {

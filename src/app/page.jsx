@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from 'react';
+// Force reload after project analyzer cleanup
 
 import Hero from '@/components/Hero';
 import KeynoteSpeakers from '@/components/KeynoteSpeakers';
@@ -7,6 +8,7 @@ import MeetOrganizers from '@/components/MeetOrganizers';
 import SponsorsSection from '@/components/Sponsors';
 import CommunityPartners from '@/components/CommunityPartners';
 import WhyAttend from '@/components/WhyAttend';
+import GalleryMarquee from '@/components/GalleryMarquee';
 import { useFeatureFlag } from '@/hooks/useFeatureFlag';
 
 import { SPEAKERS } from '@/speakers';
@@ -50,6 +52,7 @@ export default function Home() {
         <KeynoteSpeakers speakers={getKeynoteSpeakers(SPEAKERS)} />
       )}
       {isWhyAttendEnabled && <WhyAttend />}
+      <GalleryMarquee />
       {isSponsorsEnabled && <SponsorsSection />}
       {isCommunityPartnersEnabled && <CommunityPartners />}
       {isMeetOrganizersEnabled && <MeetOrganizers />}

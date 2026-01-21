@@ -53,6 +53,7 @@ h6 {
     transform: translateY(-10vh) rotate(0deg);
     opacity: 1;
   }
+
   100% {
     transform: translateY(100vh) rotate(720deg);
     opacity: 0;
@@ -63,4 +64,32 @@ h6 {
   position: absolute;
   opacity: 0.8;
   animation: fall linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 120s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 120s linear infinite;
 }

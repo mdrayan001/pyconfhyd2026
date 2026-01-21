@@ -93,6 +93,12 @@ export const NAV_ITEMS = [
         featureFlag: 'OUR_TEAM',
       },
       {
+        name: 'Gallery',
+        path: '/gallery',
+        target: '_self',
+        featureFlag: 'GALLERY',
+      },
+      {
         name: 'Travel',
         path: '/travel',
         target: '_self',
